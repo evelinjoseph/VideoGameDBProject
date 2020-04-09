@@ -40,7 +40,7 @@
             // btnRegister
             // 
             this.btnRegister.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRegister.Location = new System.Drawing.Point(303, 277);
+            this.btnRegister.Location = new System.Drawing.Point(363, 408);
             this.btnRegister.Name = "btnRegister";
             this.btnRegister.Size = new System.Drawing.Size(152, 64);
             this.btnRegister.TabIndex = 0;
@@ -51,7 +51,7 @@
             // btnLogin
             // 
             this.btnLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogin.Location = new System.Drawing.Point(504, 277);
+            this.btnLogin.Location = new System.Drawing.Point(564, 408);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(152, 64);
             this.btnLogin.TabIndex = 1;
@@ -63,7 +63,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(119, 153);
+            this.label1.Location = new System.Drawing.Point(179, 284);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(74, 29);
             this.label1.TabIndex = 2;
@@ -73,7 +73,7 @@
             // textEmail
             // 
             this.textEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textEmail.Location = new System.Drawing.Point(265, 153);
+            this.textEmail.Location = new System.Drawing.Point(325, 284);
             this.textEmail.Name = "textEmail";
             this.textEmail.Size = new System.Drawing.Size(391, 35);
             this.textEmail.TabIndex = 3;
@@ -82,8 +82,9 @@
             // textPassword
             // 
             this.textPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textPassword.Location = new System.Drawing.Point(265, 204);
+            this.textPassword.Location = new System.Drawing.Point(325, 335);
             this.textPassword.Name = "textPassword";
+            this.textPassword.PasswordChar = '*';
             this.textPassword.Size = new System.Drawing.Size(391, 35);
             this.textPassword.TabIndex = 4;
             this.textPassword.TextChanged += new System.EventHandler(this.textPassword_TextChanged);
@@ -92,7 +93,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(119, 210);
+            this.label2.Location = new System.Drawing.Point(179, 341);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(120, 29);
             this.label2.TabIndex = 5;
@@ -101,14 +102,15 @@
             // 
             // sqlConnection
             // 
-            this.sqlConnection.ConnectionString = "Data Source=DESKTOP-G9RJF60;Initial Catalog=Video Game Database;Integrated Security=True";
+            this.sqlConnection.ConnectionString = "Data Source=DESKTOP-G9RJF60;Initial Catalog=Video Game Database;Integrated Securi" +
+    "ty=True";
             this.sqlConnection.FireInfoMessageEventOnUserErrors = false;
-            //
+            // 
             // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(980, 598);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.textPassword);
             this.Controls.Add(this.textEmail);

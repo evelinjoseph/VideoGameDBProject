@@ -13,6 +13,7 @@ namespace VideoGameDBProject
 {
     public partial class LoginForm : Form
     {
+
         public LoginForm()
         { 
             InitializeComponent();
@@ -35,8 +36,7 @@ namespace VideoGameDBProject
             }
             catch (Exception ex)
             {
-                //MessageBox.Show("The App cannot open the connection to the database");
-                MessageBox.Show(ex.Message);
+               MessageBox.Show(ex.Message);
             }
 
         }
@@ -44,8 +44,7 @@ namespace VideoGameDBProject
         private void btnLogin_Click(object sender, EventArgs e)
         {
 
-            String Fname = "";
-            String Lname = "";
+            String email = "";            
 
             SqlCommand cmdLogin = sqlConnection.CreateCommand();
             cmdLogin.CommandText = "Select * from USERS Where Email = @email AND Password = @password";
@@ -56,11 +55,15 @@ namespace VideoGameDBProject
             if (reader.Read())
             {
                 MessageBox.Show("Welcome "+ reader[0].ToString() + " " + reader[1].ToString());
-                Fname = reader[0].ToString();
-                Lname = reader[1].ToString();
+                email = reader[2].ToString();
+                reader.Close();
+
                 MainForm objMain = new MainForm();
                 this.Hide();
+                objMain.DBConnection = sqlConnection;
+                objMain.email = email;
                 objMain.Show();
+                
             }
             else
             {
