@@ -24,7 +24,7 @@ namespace VideoGameDBProject
         private void MainForm_Load(object sender, EventArgs e)
         {
             SqlCommand cmdLoadVideoGames = DBConnection.CreateCommand();
-            cmdLoadVideoGames.CommandText = "SELECT * FROM VIDEO_GAME";
+            cmdLoadVideoGames.CommandText = "SELECT VG.Title, VG.ReleaseDate, VG.Genre, D.Developer_Name, P.Publisher_Name FROM VIDEO_GAME AS VG, PUBLISHER AS P, DEVELOPER AS D WHERE VG.Dev_id = D.Developer_ID AND VG.Pub_id = P.Publisher_ID";
             
             SqlDataReader reader2 = cmdLoadVideoGames.ExecuteReader();
 
