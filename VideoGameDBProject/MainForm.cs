@@ -23,6 +23,7 @@ namespace VideoGameDBProject
 
         private void MainForm_Load(object sender, EventArgs e)
         {
+            
             SqlCommand cmdLoadVideoGames = DBConnection.CreateCommand();
             cmdLoadVideoGames.CommandText = "SELECT VG.Title, VG.ReleaseDate, VG.Genre, D.Developer_Name, P.Publisher_Name FROM VIDEO_GAME AS VG, PUBLISHER AS P, DEVELOPER AS D WHERE VG.Dev_id = D.Developer_ID AND VG.Pub_id = P.Publisher_ID";
             
@@ -34,6 +35,8 @@ namespace VideoGameDBProject
             dataGridView1.DataSource = table;
 
             reader2.Close();
+
+            comboBox1.SelectedIndex = 0;
 
         }
 
@@ -49,6 +52,50 @@ namespace VideoGameDBProject
             accForm.DBConnection = DBConnection;
             accForm.email = email;
             accForm.Show();
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void searchText_TextChanged(object sender, EventArgs e)
+        {
+            SqlCommand cmdSearch = DBConnection.CreateCommand();
+
+            if(comboBox1.SelectedIndex == 0)
+            {
+                cmdSearch.CommandText = "SELECT VG.Title, VG.ReleaseDate, VG.Genre, D.Developer_Name, P.Publisher_Name FROM VIDEO_GAME AS VG, PUBLISHER AS P, DEVELOPER AS D WHERE VG.Dev_id = D.Developer_ID AND VG.Pub_id = P.Publisher_ID AND VG.Title like '%" + searchText.Text + "%'";
+
+            }
+
+            if (comboBox1.SelectedIndex == 1)
+            {
+                cmdSearch.CommandText = "SELECT VG.Title, VG.ReleaseDate, VG.Genre, D.Developer_Name, P.Publisher_Name FROM VIDEO_GAME AS VG, PUBLISHER AS P, DEVELOPER AS D WHERE VG.Dev_id = D.Developer_ID AND VG.Pub_id = P.Publisher_ID AND D.Developer_Name like '%" + searchText.Text + "%'";
+
+            }
+
+            if (comboBox1.SelectedIndex == 2)
+            {
+                cmdSearch.CommandText = "SELECT VG.Title, VG.ReleaseDate, VG.Genre, D.Developer_Name, P.Publisher_Name FROM VIDEO_GAME AS VG, PUBLISHER AS P, DEVELOPER AS D WHERE VG.Dev_id = D.Developer_ID AND VG.Pub_id = P.Publisher_ID AND P.Publisher_Name like '%" + searchText.Text + "%'";
+
+            }
+            
+
+            SqlDataReader reader2 = cmdSearch.ExecuteReader();
+
+            DataTable table = new DataTable();
+            table.Load(reader2);
+
+            dataGridView1.DataSource = table;
+
+            reader2.Close();
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
