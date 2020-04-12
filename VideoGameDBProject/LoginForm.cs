@@ -54,7 +54,7 @@ namespace VideoGameDBProject
 
             if (reader.Read())
             {
-                MessageBox.Show("Welcome "+ reader[0].ToString() + " " + reader[1].ToString());
+               
                 email = reader[2].ToString();
                 reader.Close();
 
@@ -111,9 +111,7 @@ namespace VideoGameDBProject
             this.Hide();
             frm.DBConnection = sqlConnection;
             frm.ShowDialog();
-            
            
-            
 
         }
 
