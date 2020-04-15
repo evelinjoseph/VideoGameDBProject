@@ -85,6 +85,7 @@
             this.listLabel.Size = new System.Drawing.Size(99, 29);
             this.listLabel.TabIndex = 3;
             this.listLabel.Text = "My Lists";
+            this.listLabel.Click += new System.EventHandler(this.listLabel_Click);
             // 
             // comboBox1
             // 

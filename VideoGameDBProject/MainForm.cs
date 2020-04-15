@@ -108,5 +108,16 @@ namespace VideoGameDBProject
             pForm.Show();
 
         }
+
+        private void listLabel_Click(object sender, EventArgs e)
+        {
+
+            ListForm lForm = new ListForm();
+            this.Hide();
+            lForm.DBConnection = DBConnection;
+            lForm.email = email;
+            lForm.Show();
+
+        }
     }
 }
