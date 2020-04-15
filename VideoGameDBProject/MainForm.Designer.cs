@@ -36,6 +36,8 @@
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.searchText = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.priceLabel = new System.Windows.Forms.Label();
+            this.reviewLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -54,7 +56,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(999, 29);
+            this.pictureBox1.Location = new System.Drawing.Point(999, 12);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(110, 79);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -67,7 +69,7 @@
             this.homeLabel.AutoSize = true;
             this.homeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.homeLabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.homeLabel.Location = new System.Drawing.Point(750, 54);
+            this.homeLabel.Location = new System.Drawing.Point(532, 37);
             this.homeLabel.Name = "homeLabel";
             this.homeLabel.Size = new System.Drawing.Size(78, 29);
             this.homeLabel.TabIndex = 2;
@@ -78,7 +80,7 @@
             this.listLabel.AutoSize = true;
             this.listLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listLabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.listLabel.Location = new System.Drawing.Point(864, 54);
+            this.listLabel.Location = new System.Drawing.Point(874, 37);
             this.listLabel.Name = "listLabel";
             this.listLabel.Size = new System.Drawing.Size(99, 29);
             this.listLabel.TabIndex = 3;
@@ -120,12 +122,37 @@
             this.label1.Text = "Search";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
+            // priceLabel
+            // 
+            this.priceLabel.AutoSize = true;
+            this.priceLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.priceLabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.priceLabel.Location = new System.Drawing.Point(636, 37);
+            this.priceLabel.Name = "priceLabel";
+            this.priceLabel.Size = new System.Drawing.Size(81, 29);
+            this.priceLabel.TabIndex = 8;
+            this.priceLabel.Text = "Prices";
+            this.priceLabel.Click += new System.EventHandler(this.priceLabel_Click);
+            // 
+            // reviewLabel
+            // 
+            this.reviewLabel.AutoSize = true;
+            this.reviewLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.reviewLabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.reviewLabel.Location = new System.Drawing.Point(743, 37);
+            this.reviewLabel.Name = "reviewLabel";
+            this.reviewLabel.Size = new System.Drawing.Size(105, 29);
+            this.reviewLabel.TabIndex = 9;
+            this.reviewLabel.Text = "Reviews";
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(32)))), ((int)(((byte)(130)))));
             this.ClientSize = new System.Drawing.Size(1121, 625);
+            this.Controls.Add(this.reviewLabel);
+            this.Controls.Add(this.priceLabel);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.searchText);
             this.Controls.Add(this.comboBox1);
@@ -153,5 +180,7 @@
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.TextBox searchText;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label priceLabel;
+        private System.Windows.Forms.Label reviewLabel;
     }
 }

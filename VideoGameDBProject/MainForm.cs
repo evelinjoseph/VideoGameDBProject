@@ -23,7 +23,7 @@ namespace VideoGameDBProject
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-            
+            //WindowState = FormWindowState.Maximized;
             SqlCommand cmdLoadVideoGames = DBConnection.CreateCommand();
             cmdLoadVideoGames.CommandText = "SELECT VG.Title, VG.ReleaseDate, VG.Genre, D.Developer_Name, P.Publisher_Name FROM VIDEO_GAME AS VG, PUBLISHER AS P, DEVELOPER AS D WHERE VG.Dev_id = D.Developer_ID AND VG.Pub_id = P.Publisher_ID";
             
@@ -95,6 +95,17 @@ namespace VideoGameDBProject
 
         private void label1_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void priceLabel_Click(object sender, EventArgs e)
+        {
+
+            PriceForm pForm = new PriceForm();
+            this.Hide();
+            pForm.DBConnection = DBConnection;
+            pForm.email = email;
+            pForm.Show();
 
         }
     }
