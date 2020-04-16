@@ -119,5 +119,10 @@ namespace VideoGameDBProject
         {
 
         }
+
+        private void LoginForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

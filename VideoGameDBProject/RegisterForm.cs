@@ -65,5 +65,13 @@ namespace VideoGameDBProject
 
                 
         }
+
+        private void RegisterForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            LoginForm frm = new LoginForm();
+            this.Hide();
+            frm.Show();
+            //Application.Exit();
+        }
     }
 }

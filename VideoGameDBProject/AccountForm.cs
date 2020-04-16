@@ -90,5 +90,46 @@ namespace VideoGameDBProject
         {
 
         }
+
+        private void listLabel_Click(object sender, EventArgs e)
+        {
+            ListForm lForm = new ListForm();
+            this.Hide();
+            lForm.DBConnection = DBConnection;
+            lForm.email = email;
+            lForm.Show();
+        }
+
+        private void homeLabel_Click(object sender, EventArgs e)
+        {
+            MainForm objMain = new MainForm();
+            this.Hide();
+            objMain.DBConnection = DBConnection;
+            objMain.email = email;
+            objMain.Show();
+        }
+
+        private void priceLabel_Click(object sender, EventArgs e)
+        {
+            PriceForm pForm = new PriceForm();
+            this.Hide();
+            pForm.DBConnection = DBConnection;
+            pForm.email = email;
+            pForm.Show();
+        }
+
+        private void reviewLabel_Click(object sender, EventArgs e)
+        {
+            ReviewForm rForm = new ReviewForm();
+            this.Hide();
+            rForm.DBConnection = DBConnection;
+            rForm.email = email;
+            rForm.Show();
+        }
+
+        private void AccountForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

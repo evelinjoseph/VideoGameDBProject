@@ -71,6 +71,7 @@
             this.priceLabel1.Size = new System.Drawing.Size(227, 29);
             this.priceLabel1.TabIndex = 3;
             this.priceLabel1.Text = "Select Video Game:";
+            this.priceLabel1.Click += new System.EventHandler(this.priceLabel1_Click);
             // 
             // reviewLabel
             // 
@@ -82,6 +83,7 @@
             this.reviewLabel.Size = new System.Drawing.Size(105, 29);
             this.reviewLabel.TabIndex = 14;
             this.reviewLabel.Text = "Reviews";
+            this.reviewLabel.Click += new System.EventHandler(this.reviewLabel_Click);
             // 
             // priceLabel
             // 
@@ -117,6 +119,7 @@
             this.homeLabel.Size = new System.Drawing.Size(78, 29);
             this.homeLabel.TabIndex = 11;
             this.homeLabel.Text = "Home";
+            this.homeLabel.Click += new System.EventHandler(this.homeLabel_Click);
             // 
             // pictureBox1
             // 
@@ -127,6 +130,7 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox1.TabIndex = 10;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // PriceForm
             // 
@@ -144,6 +148,7 @@
             this.Controls.Add(this.priceGrid);
             this.Name = "PriceForm";
             this.Text = "Prices";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.PriceForm_FormClosing);
             this.Load += new System.EventHandler(this.PriceForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.priceGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

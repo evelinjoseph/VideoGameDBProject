@@ -34,7 +34,11 @@
             this.listLabel = new System.Windows.Forms.Label();
             this.homeLabel = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.priceLabel1 = new System.Windows.Forms.Label();
+            this.reviewCB = new System.Windows.Forms.ComboBox();
+            this.reviewGrid = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.reviewGrid)).BeginInit();
             this.SuspendLayout();
             // 
             // reviewLabel
@@ -47,6 +51,7 @@
             this.reviewLabel.Size = new System.Drawing.Size(105, 29);
             this.reviewLabel.TabIndex = 19;
             this.reviewLabel.Text = "Reviews";
+            this.reviewLabel.Click += new System.EventHandler(this.reviewLabel_Click);
             // 
             // priceLabel
             // 
@@ -58,6 +63,7 @@
             this.priceLabel.Size = new System.Drawing.Size(81, 29);
             this.priceLabel.TabIndex = 18;
             this.priceLabel.Text = "Prices";
+            this.priceLabel.Click += new System.EventHandler(this.priceLabel_Click);
             // 
             // listLabel
             // 
@@ -69,6 +75,7 @@
             this.listLabel.Size = new System.Drawing.Size(99, 29);
             this.listLabel.TabIndex = 17;
             this.listLabel.Text = "My Lists";
+            this.listLabel.Click += new System.EventHandler(this.listLabel_Click);
             // 
             // homeLabel
             // 
@@ -80,6 +87,7 @@
             this.homeLabel.Size = new System.Drawing.Size(78, 29);
             this.homeLabel.TabIndex = 16;
             this.homeLabel.Text = "Home";
+            this.homeLabel.Click += new System.EventHandler(this.homeLabel_Click);
             // 
             // pictureBox1
             // 
@@ -90,13 +98,48 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox1.TabIndex = 15;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // priceLabel1
+            // 
+            this.priceLabel1.AutoSize = true;
+            this.priceLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.priceLabel1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.priceLabel1.Location = new System.Drawing.Point(148, 141);
+            this.priceLabel1.Name = "priceLabel1";
+            this.priceLabel1.Size = new System.Drawing.Size(227, 29);
+            this.priceLabel1.TabIndex = 22;
+            this.priceLabel1.Text = "Select Video Game:";
+            // 
+            // reviewCB
+            // 
+            this.reviewCB.FormattingEnabled = true;
+            this.reviewCB.Location = new System.Drawing.Point(390, 142);
+            this.reviewCB.Name = "reviewCB";
+            this.reviewCB.Size = new System.Drawing.Size(382, 28);
+            this.reviewCB.TabIndex = 21;
+            this.reviewCB.SelectedIndexChanged += new System.EventHandler(this.reviewCB_SelectedIndexChanged);
+            // 
+            // reviewGrid
+            // 
+            this.reviewGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.reviewGrid.Location = new System.Drawing.Point(35, 198);
+            this.reviewGrid.Name = "reviewGrid";
+            this.reviewGrid.RowHeadersWidth = 62;
+            this.reviewGrid.RowTemplate.Height = 28;
+            this.reviewGrid.Size = new System.Drawing.Size(879, 316);
+            this.reviewGrid.TabIndex = 20;
+            this.reviewGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.reviewGrid_CellContentClick);
             // 
             // ReviewForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(32)))), ((int)(((byte)(130)))));
-            this.ClientSize = new System.Drawing.Size(880, 572);
+            this.ClientSize = new System.Drawing.Size(955, 609);
+            this.Controls.Add(this.priceLabel1);
+            this.Controls.Add(this.reviewCB);
+            this.Controls.Add(this.reviewGrid);
             this.Controls.Add(this.reviewLabel);
             this.Controls.Add(this.priceLabel);
             this.Controls.Add(this.listLabel);
@@ -104,7 +147,10 @@
             this.Controls.Add(this.pictureBox1);
             this.Name = "ReviewForm";
             this.Text = "Reviews";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ReviewForm_FormClosing);
+            this.Load += new System.EventHandler(this.ReviewForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.reviewGrid)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -117,5 +163,8 @@
         private System.Windows.Forms.Label listLabel;
         private System.Windows.Forms.Label homeLabel;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label priceLabel1;
+        private System.Windows.Forms.ComboBox reviewCB;
+        private System.Windows.Forms.DataGridView reviewGrid;
     }
 }

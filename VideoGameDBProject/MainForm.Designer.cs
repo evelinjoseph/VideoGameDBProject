@@ -145,6 +145,7 @@
             this.reviewLabel.Size = new System.Drawing.Size(105, 29);
             this.reviewLabel.TabIndex = 9;
             this.reviewLabel.Text = "Reviews";
+            this.reviewLabel.Click += new System.EventHandler(this.reviewLabel_Click);
             // 
             // MainForm
             // 
@@ -164,6 +165,7 @@
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Home";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
             this.Load += new System.EventHandler(this.MainForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

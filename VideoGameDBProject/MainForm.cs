@@ -119,5 +119,19 @@ namespace VideoGameDBProject
             lForm.Show();
 
         }
+
+        private void reviewLabel_Click(object sender, EventArgs e)
+        {
+            ReviewForm rForm = new ReviewForm();
+            this.Hide();
+            rForm.DBConnection = DBConnection;
+            rForm.email = email;
+            rForm.Show();
+        }
+
+        private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
