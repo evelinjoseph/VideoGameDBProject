@@ -105,7 +105,7 @@ namespace VideoGameDBProject
             this.Hide();
             pForm.DBConnection = DBConnection;
             pForm.email = email;
-            pForm.Show();
+            pForm.ShowDialog();
 
         }
 
@@ -116,7 +116,7 @@ namespace VideoGameDBProject
             this.Hide();
             lForm.DBConnection = DBConnection;
             lForm.email = email;
-            lForm.Show();
+            lForm.ShowDialog();
 
         }
 
@@ -126,7 +126,7 @@ namespace VideoGameDBProject
             this.Hide();
             rForm.DBConnection = DBConnection;
             rForm.email = email;
-            rForm.Show();
+            rForm.ShowDialog();
         }
 
         private void MainForm_FormClosing(object sender, FormClosingEventArgs e)

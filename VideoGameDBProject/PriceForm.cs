@@ -35,6 +35,24 @@ namespace VideoGameDBProject
             }
             reader.Close();
 
+            priceCB.SelectedIndex = 0;
+
+            SqlCommand cmdLoadPrice = DBConnection.CreateCommand();
+
+
+            cmdLoadPrice.CommandText = "SELECT VG.Title, VG.ReleaseDate, VG.Genre, P.Store_Name, P.Price FROM VIDEO_GAME AS VG, PRICE AS P WHERE VG.VideoGame_id = P.VG_ID AND VG.Title = '" + priceCB.SelectedItem + "'";
+
+
+
+            SqlDataReader reader2 = cmdLoadPrice.ExecuteReader();
+
+            DataTable table = new DataTable();
+            table.Load(reader2);
+
+            priceGrid.DataSource = table;
+
+            reader2.Close();
+
         }
 
         private void priceGrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -48,9 +66,8 @@ namespace VideoGameDBProject
             SqlCommand cmdLoadPrice = DBConnection.CreateCommand();
 
            
-           cmdLoadPrice.CommandText = "SELECT VG.Title, VG.ReleaseDate, VG.Genre, P.Store_Name, P.Price FROM VIDEO_GAME AS VG, PRICE AS P WHERE VG.VideoGame_id = P.VG_ID AND VG.Title like '%" + priceCB.SelectedItem + "%'";
-
-            
+           cmdLoadPrice.CommandText = "SELECT VG.Title, VG.ReleaseDate, VG.Genre, P.Store_Name, P.Price FROM VIDEO_GAME AS VG, PRICE AS P WHERE VG.VideoGame_id = P.VG_ID AND VG.Title = '" + priceCB.SelectedItem + "'";
+                   
 
 
             SqlDataReader reader2 = cmdLoadPrice.ExecuteReader();
@@ -76,7 +93,7 @@ namespace VideoGameDBProject
             this.Hide();
             lForm.DBConnection = DBConnection;
             lForm.email = email;
-            lForm.Show();
+            lForm.ShowDialog();
 
         }
 
@@ -86,7 +103,7 @@ namespace VideoGameDBProject
             this.Hide();
             rForm.DBConnection = DBConnection;
             rForm.email = email;
-            rForm.Show();
+            rForm.ShowDialog();
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -95,7 +112,7 @@ namespace VideoGameDBProject
             this.Hide();
             accForm.DBConnection = DBConnection;
             accForm.email = email;
-            accForm.Show();
+            accForm.ShowDialog();
         }
 
         private void homeLabel_Click(object sender, EventArgs e)
@@ -104,7 +121,7 @@ namespace VideoGameDBProject
             this.Hide();
             objMain.DBConnection = DBConnection;
             objMain.email = email;
-            objMain.Show();
+            objMain.ShowDialog();
         }
 
         private void PriceForm_FormClosing(object sender, FormClosingEventArgs e)

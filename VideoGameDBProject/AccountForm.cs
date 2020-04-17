@@ -97,7 +97,7 @@ namespace VideoGameDBProject
             this.Hide();
             lForm.DBConnection = DBConnection;
             lForm.email = email;
-            lForm.Show();
+            lForm.ShowDialog();
         }
 
         private void homeLabel_Click(object sender, EventArgs e)
@@ -106,7 +106,7 @@ namespace VideoGameDBProject
             this.Hide();
             objMain.DBConnection = DBConnection;
             objMain.email = email;
-            objMain.Show();
+            objMain.ShowDialog();
         }
 
         private void priceLabel_Click(object sender, EventArgs e)
@@ -115,7 +115,7 @@ namespace VideoGameDBProject
             this.Hide();
             pForm.DBConnection = DBConnection;
             pForm.email = email;
-            pForm.Show();
+            pForm.ShowDialog();
         }
 
         private void reviewLabel_Click(object sender, EventArgs e)
@@ -124,7 +124,7 @@ namespace VideoGameDBProject
             this.Hide();
             rForm.DBConnection = DBConnection;
             rForm.email = email;
-            rForm.Show();
+            rForm.ShowDialog();
         }
 
         private void AccountForm_FormClosing(object sender, FormClosingEventArgs e)

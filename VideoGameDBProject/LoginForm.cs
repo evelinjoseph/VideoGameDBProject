@@ -62,7 +62,7 @@ namespace VideoGameDBProject
                 this.Hide();
                 objMain.DBConnection = sqlConnection;
                 objMain.email = email;
-                objMain.Show();
+                objMain.ShowDialog();
                 
             }
             else

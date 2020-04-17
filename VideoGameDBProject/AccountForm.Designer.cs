@@ -42,6 +42,7 @@
             this.priceLabel = new System.Windows.Forms.Label();
             this.listLabel = new System.Windows.Forms.Label();
             this.homeLabel = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -193,12 +194,22 @@
             this.homeLabel.Text = "Home";
             this.homeLabel.Click += new System.EventHandler(this.homeLabel_Click);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(696, 676);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(153, 33);
+            this.button1.TabIndex = 19;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // AccountForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(32)))), ((int)(((byte)(130)))));
             this.ClientSize = new System.Drawing.Size(1136, 721);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.reviewLabel);
             this.Controls.Add(this.priceLabel);
             this.Controls.Add(this.listLabel);
@@ -236,5 +247,6 @@
         private System.Windows.Forms.Label priceLabel;
         private System.Windows.Forms.Label listLabel;
         private System.Windows.Forms.Label homeLabel;
+        private System.Windows.Forms.Button button1;
     }
 }
