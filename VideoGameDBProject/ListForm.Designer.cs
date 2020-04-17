@@ -60,7 +60,7 @@
             this.reviewLabel.AutoSize = true;
             this.reviewLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.reviewLabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.reviewLabel.Location = new System.Drawing.Point(730, 40);
+            this.reviewLabel.Location = new System.Drawing.Point(737, 37);
             this.reviewLabel.Name = "reviewLabel";
             this.reviewLabel.Size = new System.Drawing.Size(105, 29);
             this.reviewLabel.TabIndex = 19;
@@ -72,7 +72,7 @@
             this.priceLabel.AutoSize = true;
             this.priceLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.priceLabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.priceLabel.Location = new System.Drawing.Point(623, 40);
+            this.priceLabel.Location = new System.Drawing.Point(630, 37);
             this.priceLabel.Name = "priceLabel";
             this.priceLabel.Size = new System.Drawing.Size(81, 29);
             this.priceLabel.TabIndex = 18;
@@ -84,7 +84,7 @@
             this.listLabel.AutoSize = true;
             this.listLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listLabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.listLabel.Location = new System.Drawing.Point(861, 40);
+            this.listLabel.Location = new System.Drawing.Point(868, 37);
             this.listLabel.Name = "listLabel";
             this.listLabel.Size = new System.Drawing.Size(99, 29);
             this.listLabel.TabIndex = 17;
@@ -96,7 +96,7 @@
             this.homeLabel.AutoSize = true;
             this.homeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.homeLabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.homeLabel.Location = new System.Drawing.Point(519, 40);
+            this.homeLabel.Location = new System.Drawing.Point(526, 37);
             this.homeLabel.Name = "homeLabel";
             this.homeLabel.Size = new System.Drawing.Size(78, 29);
             this.homeLabel.TabIndex = 16;
@@ -106,7 +106,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(986, 15);
+            this.pictureBox1.Location = new System.Drawing.Point(993, 12);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(110, 79);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;

@@ -51,7 +51,7 @@ namespace VideoGameDBProject
             this.Hide();
             accForm.DBConnection = DBConnection;
             accForm.email = email;
-            accForm.Show();
+            accForm.ShowDialog();
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
