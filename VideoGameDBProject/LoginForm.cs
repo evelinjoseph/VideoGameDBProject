@@ -17,6 +17,7 @@ namespace VideoGameDBProject
         public LoginForm()
         { 
             InitializeComponent();
+            this.StartPosition = FormStartPosition.CenterScreen;
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -26,7 +27,7 @@ namespace VideoGameDBProject
 
         private void LoginForm_Load(object sender, EventArgs e)
         {
-
+           
 
             try
             {

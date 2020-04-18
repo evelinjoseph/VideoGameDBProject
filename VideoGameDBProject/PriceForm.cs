@@ -20,11 +20,12 @@ namespace VideoGameDBProject
         public PriceForm()
         {
             InitializeComponent();
+            this.StartPosition = FormStartPosition.CenterScreen;
         }
 
         private void PriceForm_Load(object sender, EventArgs e)
         {
-
+            
             SqlCommand cmdLoadVG = DBConnection.CreateCommand();
             cmdLoadVG.CommandText = "SELECT DISTINCT VG.Title FROM VIDEO_GAME AS VG, PRICE as P WHERE VG.VideoGame_id = P.VG_ID";
             SqlDataReader reader = cmdLoadVG.ExecuteReader();

@@ -19,10 +19,14 @@ namespace VideoGameDBProject
         public AccountForm()
         {
             InitializeComponent();
+            this.StartPosition = FormStartPosition.CenterScreen;
         }
 
         private void AccountForm_Load(object sender, EventArgs e)
         {
+            
+            saveButton.Visible = false;
+            deleteButton.Visible = false;
             SqlCommand cmdAccount = DBConnection.CreateCommand();
             cmdAccount.CommandText = "Select * from USERS Where Email = '" + email + "'";
             SqlDataReader reader = cmdAccount.ExecuteReader();
@@ -130,6 +134,26 @@ namespace VideoGameDBProject
         private void AccountForm_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
+        }
+
+        private void editButton_Click(object sender, EventArgs e)
+        {
+            editButton.Visible = false;
+            saveButton.Visible = true;
+            deleteButton.Visible = true;
+            textBox1.ReadOnly = false;
+            textBox2.ReadOnly = false;
+            textBox4.ReadOnly = false;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void saveButton_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

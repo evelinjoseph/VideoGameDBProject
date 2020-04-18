@@ -42,7 +42,10 @@
             this.priceLabel = new System.Windows.Forms.Label();
             this.listLabel = new System.Windows.Forms.Label();
             this.homeLabel = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.editButton = new System.Windows.Forms.Button();
+            this.saveButton = new System.Windows.Forms.Button();
+            this.deleteButton = new System.Windows.Forms.Button();
+            this.signOutButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -194,23 +197,59 @@
             this.homeLabel.Text = "Home";
             this.homeLabel.Click += new System.EventHandler(this.homeLabel_Click);
             // 
-            // button1
+            // editButton
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(702, 639);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(153, 38);
-            this.button1.TabIndex = 19;
-            this.button1.Text = "Edit";
-            this.button1.UseVisualStyleBackColor = true;
+            this.editButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.editButton.Location = new System.Drawing.Point(688, 639);
+            this.editButton.Name = "editButton";
+            this.editButton.Size = new System.Drawing.Size(167, 49);
+            this.editButton.TabIndex = 19;
+            this.editButton.Text = "Edit";
+            this.editButton.UseVisualStyleBackColor = true;
+            this.editButton.Click += new System.EventHandler(this.editButton_Click);
+            // 
+            // saveButton
+            // 
+            this.saveButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.saveButton.Location = new System.Drawing.Point(640, 639);
+            this.saveButton.Name = "saveButton";
+            this.saveButton.Size = new System.Drawing.Size(215, 49);
+            this.saveButton.TabIndex = 20;
+            this.saveButton.Text = "Save Changes";
+            this.saveButton.UseVisualStyleBackColor = true;
+            this.saveButton.Click += new System.EventHandler(this.saveButton_Click);
+            // 
+            // deleteButton
+            // 
+            this.deleteButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.deleteButton.Location = new System.Drawing.Point(640, 709);
+            this.deleteButton.Name = "deleteButton";
+            this.deleteButton.Size = new System.Drawing.Size(215, 49);
+            this.deleteButton.TabIndex = 21;
+            this.deleteButton.Text = "Delete Account";
+            this.deleteButton.UseVisualStyleBackColor = true;
+            this.deleteButton.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // signOutButton
+            // 
+            this.signOutButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.signOutButton.Location = new System.Drawing.Point(385, 639);
+            this.signOutButton.Name = "signOutButton";
+            this.signOutButton.Size = new System.Drawing.Size(215, 49);
+            this.signOutButton.TabIndex = 22;
+            this.signOutButton.Text = "Sign Out";
+            this.signOutButton.UseVisualStyleBackColor = true;
             // 
             // AccountForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(32)))), ((int)(((byte)(130)))));
-            this.ClientSize = new System.Drawing.Size(1136, 721);
-            this.Controls.Add(this.button1);
+            this.ClientSize = new System.Drawing.Size(1147, 859);
+            this.Controls.Add(this.signOutButton);
+            this.Controls.Add(this.deleteButton);
+            this.Controls.Add(this.saveButton);
+            this.Controls.Add(this.editButton);
             this.Controls.Add(this.reviewLabel);
             this.Controls.Add(this.priceLabel);
             this.Controls.Add(this.listLabel);
@@ -248,6 +287,9 @@
         private System.Windows.Forms.Label priceLabel;
         private System.Windows.Forms.Label listLabel;
         private System.Windows.Forms.Label homeLabel;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button editButton;
+        private System.Windows.Forms.Button saveButton;
+        private System.Windows.Forms.Button deleteButton;
+        private System.Windows.Forms.Button signOutButton;
     }
 }

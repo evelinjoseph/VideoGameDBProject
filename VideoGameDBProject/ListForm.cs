@@ -19,6 +19,7 @@ namespace VideoGameDBProject
         public ListForm()
         {
             InitializeComponent();
+            this.StartPosition = FormStartPosition.CenterScreen;
         }
 
         private void ListForm_Load(object sender, EventArgs e)

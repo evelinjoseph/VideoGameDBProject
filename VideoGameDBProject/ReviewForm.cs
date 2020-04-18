@@ -20,6 +20,7 @@ namespace VideoGameDBProject
         public ReviewForm()
         {
             InitializeComponent();
+            this.StartPosition = FormStartPosition.CenterScreen;
         }
 
         private void listLabel_Click(object sender, EventArgs e)
@@ -80,6 +81,8 @@ namespace VideoGameDBProject
 
         private void ReviewForm_Load(object sender, EventArgs e)
         {
+
+            
             SqlCommand cmdLoadVG = DBConnection.CreateCommand();
             cmdLoadVG.CommandText = "SELECT DISTINCT VG.Title FROM VIDEO_GAME AS VG, REVIEW as R WHERE VG.VideoGame_id = R.Game_ID";
             SqlDataReader reader = cmdLoadVG.ExecuteReader();
