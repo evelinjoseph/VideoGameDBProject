@@ -154,7 +154,7 @@
             this.reviewLabel.AutoSize = true;
             this.reviewLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.reviewLabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.reviewLabel.Location = new System.Drawing.Point(894, 9);
+            this.reviewLabel.Location = new System.Drawing.Point(905, 18);
             this.reviewLabel.Name = "reviewLabel";
             this.reviewLabel.Size = new System.Drawing.Size(105, 29);
             this.reviewLabel.TabIndex = 18;
@@ -166,7 +166,7 @@
             this.priceLabel.AutoSize = true;
             this.priceLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.priceLabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.priceLabel.Location = new System.Drawing.Point(787, 9);
+            this.priceLabel.Location = new System.Drawing.Point(798, 18);
             this.priceLabel.Name = "priceLabel";
             this.priceLabel.Size = new System.Drawing.Size(81, 29);
             this.priceLabel.TabIndex = 17;
@@ -178,7 +178,7 @@
             this.listLabel.AutoSize = true;
             this.listLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listLabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.listLabel.Location = new System.Drawing.Point(1025, 9);
+            this.listLabel.Location = new System.Drawing.Point(1036, 18);
             this.listLabel.Name = "listLabel";
             this.listLabel.Size = new System.Drawing.Size(99, 29);
             this.listLabel.TabIndex = 16;
@@ -190,7 +190,7 @@
             this.homeLabel.AutoSize = true;
             this.homeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.homeLabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.homeLabel.Location = new System.Drawing.Point(683, 9);
+            this.homeLabel.Location = new System.Drawing.Point(694, 18);
             this.homeLabel.Name = "homeLabel";
             this.homeLabel.Size = new System.Drawing.Size(78, 29);
             this.homeLabel.TabIndex = 15;

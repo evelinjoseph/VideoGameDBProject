@@ -76,13 +76,54 @@ namespace VideoGameDBProject
 
         private void reviewCB_SelectedIndexChanged(object sender, EventArgs e)
         {
+            if (reviewCB.SelectedIndex == 0)
+            {
 
+                SqlCommand cmdLoadReview1 = DBConnection.CreateCommand();
+
+
+
+                cmdLoadReview1.CommandText = "SELECT VG.Title, R.Reviewer_Name, R.Review_URL FROM VIDEO_GAME AS VG, REVIEW AS R WHERE VG.VideoGame_id = R.Game_ID";
+
+
+                SqlDataReader reader3 = cmdLoadReview1.ExecuteReader();
+
+                DataTable table1 = new DataTable();
+                table1.Load(reader3);
+
+                reviewGrid.DataSource = table1;
+
+                reader3.Close();
+
+
+
+            }
+
+            else
+            {
+
+                SqlCommand cmdLoadReview = DBConnection.CreateCommand();
+
+
+                cmdLoadReview.CommandText = "SELECT VG.Title, R.Reviewer_Name, R.Review_URL FROM VIDEO_GAME AS VG, REVIEW AS R WHERE VG.VideoGame_id = R.Game_ID AND VG.Title = '" + reviewCB.SelectedItem + "'";
+
+                
+                SqlDataReader reader2 = cmdLoadReview.ExecuteReader();
+
+                DataTable table = new DataTable();
+                table.Load(reader2);
+
+                reviewGrid.DataSource = table;
+
+                reader2.Close();
+
+            }
         }
 
         private void ReviewForm_Load(object sender, EventArgs e)
         {
 
-            
+            reviewCB.Items.Add("");
             SqlCommand cmdLoadVG = DBConnection.CreateCommand();
             cmdLoadVG.CommandText = "SELECT DISTINCT VG.Title FROM VIDEO_GAME AS VG, REVIEW as R WHERE VG.VideoGame_id = R.Game_ID";
             SqlDataReader reader = cmdLoadVG.ExecuteReader();
@@ -92,6 +133,22 @@ namespace VideoGameDBProject
                 reviewCB.Items.Add(reader[0].ToString());
             }
             reader.Close();
+
+            SqlCommand cmdLoadReview = DBConnection.CreateCommand();
+
+
+            
+            cmdLoadReview.CommandText = "SELECT VG.Title, R.Reviewer_Name, R.Review_URL FROM VIDEO_GAME AS VG, REVIEW AS R WHERE VG.VideoGame_id = R.Game_ID";
+
+
+            SqlDataReader reader2 = cmdLoadReview.ExecuteReader();
+
+            DataTable table = new DataTable();
+            table.Load(reader2);
+
+            reviewGrid.DataSource = table;
+
+            reader2.Close();
         }
     }
 }

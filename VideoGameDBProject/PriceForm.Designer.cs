@@ -54,6 +54,7 @@
             // 
             // priceCB
             // 
+            this.priceCB.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.priceCB.FormattingEnabled = true;
             this.priceCB.Location = new System.Drawing.Point(385, 133);
             this.priceCB.Name = "priceCB";

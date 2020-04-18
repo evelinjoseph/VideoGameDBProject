@@ -25,7 +25,7 @@ namespace VideoGameDBProject
 
         private void PriceForm_Load(object sender, EventArgs e)
         {
-            
+            priceCB.Items.Add("");
             SqlCommand cmdLoadVG = DBConnection.CreateCommand();
             cmdLoadVG.CommandText = "SELECT DISTINCT VG.Title FROM VIDEO_GAME AS VG, PRICE as P WHERE VG.VideoGame_id = P.VG_ID";
             SqlDataReader reader = cmdLoadVG.ExecuteReader();
@@ -36,13 +36,15 @@ namespace VideoGameDBProject
             }
             reader.Close();
 
-            priceCB.SelectedIndex = 0;
+            //priceCB.SelectedIndex = 0;
+            
+
 
             SqlCommand cmdLoadPrice = DBConnection.CreateCommand();
 
 
-            cmdLoadPrice.CommandText = "SELECT VG.Title, VG.ReleaseDate, VG.Genre, P.Store_Name, P.Price FROM VIDEO_GAME AS VG, PRICE AS P WHERE VG.VideoGame_id = P.VG_ID AND VG.Title = '" + priceCB.SelectedItem + "'";
-
+            //cmdLoadPrice.CommandText = "SELECT VG.Title, P.Store_Name, P.Price, P.URL FROM VIDEO_GAME AS VG, PRICE AS P WHERE VG.VideoGame_id = P.VG_ID AND VG.Title = '" + priceCB.SelectedItem + "'";
+            cmdLoadPrice.CommandText = "SELECT VG.Title, P.Store_Name, P.Price, P.URL FROM VIDEO_GAME AS VG, PRICE AS P WHERE VG.VideoGame_id = P.VG_ID";
 
 
             SqlDataReader reader2 = cmdLoadPrice.ExecuteReader();
@@ -64,21 +66,49 @@ namespace VideoGameDBProject
         private void priceCB_SelectedIndexChanged(object sender, EventArgs e)
         {
 
-            SqlCommand cmdLoadPrice = DBConnection.CreateCommand();
+            if(priceCB.SelectedIndex == 0)
+            {
 
-           
-           cmdLoadPrice.CommandText = "SELECT VG.Title, VG.ReleaseDate, VG.Genre, P.Store_Name, P.Price FROM VIDEO_GAME AS VG, PRICE AS P WHERE VG.VideoGame_id = P.VG_ID AND VG.Title = '" + priceCB.SelectedItem + "'";
-                   
+                SqlCommand cmdLoadPrice1 = DBConnection.CreateCommand();
 
 
-            SqlDataReader reader2 = cmdLoadPrice.ExecuteReader();
+                
+                cmdLoadPrice1.CommandText = "SELECT VG.Title, P.Store_Name, P.Price, P.URL FROM VIDEO_GAME AS VG, PRICE AS P WHERE VG.VideoGame_id = P.VG_ID";
 
-            DataTable table = new DataTable();
-            table.Load(reader2);
 
-            priceGrid.DataSource = table;
+                SqlDataReader reader3 = cmdLoadPrice1.ExecuteReader();
 
-            reader2.Close();
+                DataTable table1 = new DataTable();
+                table1.Load(reader3);
+
+                priceGrid.DataSource = table1;
+
+                reader3.Close();
+
+
+
+            }
+
+            else
+            {
+                
+                SqlCommand cmdLoadPrice = DBConnection.CreateCommand();
+
+
+                cmdLoadPrice.CommandText = "SELECT VG.Title, P.Store_Name, P.Price, P.URL FROM VIDEO_GAME AS VG, PRICE AS P WHERE VG.VideoGame_id = P.VG_ID AND VG.Title = '" + priceCB.SelectedItem + "'";
+
+
+
+                SqlDataReader reader2 = cmdLoadPrice.ExecuteReader();
+
+                DataTable table = new DataTable();
+                table.Load(reader2);
+
+                priceGrid.DataSource = table;
+
+                reader2.Close();
+
+            }            
 
         }
 

@@ -113,6 +113,7 @@
             // 
             // reviewCB
             // 
+            this.reviewCB.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.reviewCB.FormattingEnabled = true;
             this.reviewCB.Location = new System.Drawing.Point(390, 142);
             this.reviewCB.Name = "reviewCB";
