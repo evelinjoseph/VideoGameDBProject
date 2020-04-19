@@ -54,6 +54,8 @@
             this.deletePic = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.saveButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.addPic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.editPic)).BeginInit();
@@ -121,6 +123,7 @@
             // 
             // comboBox1
             // 
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(728, 156);
             this.comboBox1.Name = "comboBox1";
@@ -239,12 +242,13 @@
             // addPic
             // 
             this.addPic.Image = ((System.Drawing.Image)(resources.GetObject("addPic.Image")));
-            this.addPic.Location = new System.Drawing.Point(926, 144);
+            this.addPic.Location = new System.Drawing.Point(926, 145);
             this.addPic.Name = "addPic";
             this.addPic.Size = new System.Drawing.Size(52, 49);
             this.addPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.addPic.TabIndex = 31;
             this.addPic.TabStop = false;
+            this.addPic.Click += new System.EventHandler(this.addPic_Click);
             // 
             // editPic
             // 
@@ -255,6 +259,7 @@
             this.editPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.editPic.TabIndex = 32;
             this.editPic.TabStop = false;
+            this.editPic.Click += new System.EventHandler(this.editPic_Click);
             // 
             // deletePic
             // 
@@ -265,13 +270,14 @@
             this.deletePic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.deletePic.TabIndex = 33;
             this.deletePic.TabStop = false;
+            this.deletePic.Click += new System.EventHandler(this.deletePic_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(595, 158);
+            this.label1.Location = new System.Drawing.Point(571, 158);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(130, 29);
             this.label1.TabIndex = 21;
@@ -282,11 +288,30 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label2.Location = new System.Drawing.Point(42, 155);
+            this.label2.Location = new System.Drawing.Point(28, 155);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(165, 29);
             this.label2.TabIndex = 29;
             this.label2.Text = "Video Games:";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(761, 152);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(188, 35);
+            this.textBox1.TabIndex = 34;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
+            // saveButton
+            // 
+            this.saveButton.Location = new System.Drawing.Point(968, 152);
+            this.saveButton.Name = "saveButton";
+            this.saveButton.Size = new System.Drawing.Size(98, 35);
+            this.saveButton.TabIndex = 35;
+            this.saveButton.Text = "Add List";
+            this.saveButton.UseVisualStyleBackColor = true;
+            this.saveButton.Click += new System.EventHandler(this.saveButton_Click);
             // 
             // ListForm
             // 
@@ -294,6 +319,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(32)))), ((int)(((byte)(130)))));
             this.ClientSize = new System.Drawing.Size(1134, 777);
+            this.Controls.Add(this.saveButton);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.deletePic);
             this.Controls.Add(this.editPic);
             this.Controls.Add(this.addPic);
@@ -349,5 +376,7 @@
         private System.Windows.Forms.PictureBox deletePic;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button saveButton;
     }
 }
