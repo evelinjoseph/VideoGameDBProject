@@ -199,51 +199,57 @@
             // 
             // editButton
             // 
+            this.editButton.BackColor = System.Drawing.Color.White;
             this.editButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.editButton.Location = new System.Drawing.Point(688, 639);
+            this.editButton.Location = new System.Drawing.Point(619, 640);
             this.editButton.Name = "editButton";
-            this.editButton.Size = new System.Drawing.Size(167, 49);
+            this.editButton.Size = new System.Drawing.Size(215, 49);
             this.editButton.TabIndex = 19;
             this.editButton.Text = "Edit";
-            this.editButton.UseVisualStyleBackColor = true;
+            this.editButton.UseVisualStyleBackColor = false;
             this.editButton.Click += new System.EventHandler(this.editButton_Click);
             // 
             // saveButton
             // 
+            this.saveButton.BackColor = System.Drawing.Color.White;
             this.saveButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.saveButton.Location = new System.Drawing.Point(640, 639);
+            this.saveButton.Location = new System.Drawing.Point(619, 640);
             this.saveButton.Name = "saveButton";
             this.saveButton.Size = new System.Drawing.Size(215, 49);
             this.saveButton.TabIndex = 20;
             this.saveButton.Text = "Save Changes";
-            this.saveButton.UseVisualStyleBackColor = true;
+            this.saveButton.UseVisualStyleBackColor = false;
             this.saveButton.Click += new System.EventHandler(this.saveButton_Click);
             // 
             // deleteButton
             // 
+            this.deleteButton.BackColor = System.Drawing.Color.White;
             this.deleteButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.deleteButton.Location = new System.Drawing.Point(640, 709);
+            this.deleteButton.Location = new System.Drawing.Point(500, 709);
             this.deleteButton.Name = "deleteButton";
             this.deleteButton.Size = new System.Drawing.Size(215, 49);
             this.deleteButton.TabIndex = 21;
             this.deleteButton.Text = "Delete Account";
-            this.deleteButton.UseVisualStyleBackColor = true;
+            this.deleteButton.UseVisualStyleBackColor = false;
             this.deleteButton.Click += new System.EventHandler(this.button1_Click);
             // 
             // signOutButton
             // 
+            this.signOutButton.BackColor = System.Drawing.Color.White;
             this.signOutButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.signOutButton.Location = new System.Drawing.Point(385, 639);
+            this.signOutButton.Location = new System.Drawing.Point(398, 640);
             this.signOutButton.Name = "signOutButton";
             this.signOutButton.Size = new System.Drawing.Size(215, 49);
             this.signOutButton.TabIndex = 22;
             this.signOutButton.Text = "Sign Out";
-            this.signOutButton.UseVisualStyleBackColor = true;
+            this.signOutButton.UseVisualStyleBackColor = false;
+            this.signOutButton.Click += new System.EventHandler(this.signOutButton_Click);
             // 
             // AccountForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(32)))), ((int)(((byte)(130)))));
             this.ClientSize = new System.Drawing.Size(1147, 859);
             this.Controls.Add(this.signOutButton);

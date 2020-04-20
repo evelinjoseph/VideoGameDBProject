@@ -118,24 +118,26 @@
             // 
             // btnRegister2
             // 
+            this.btnRegister2.BackColor = System.Drawing.Color.White;
             this.btnRegister2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegister2.Location = new System.Drawing.Point(229, 333);
             this.btnRegister2.Name = "btnRegister2";
             this.btnRegister2.Size = new System.Drawing.Size(141, 64);
             this.btnRegister2.TabIndex = 9;
             this.btnRegister2.Text = "Register";
-            this.btnRegister2.UseVisualStyleBackColor = true;
+            this.btnRegister2.UseVisualStyleBackColor = false;
             this.btnRegister2.Click += new System.EventHandler(this.button1_Click);
             // 
             // btnRegLogin
             // 
+            this.btnRegLogin.BackColor = System.Drawing.Color.White;
             this.btnRegLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegLogin.Location = new System.Drawing.Point(415, 333);
             this.btnRegLogin.Name = "btnRegLogin";
             this.btnRegLogin.Size = new System.Drawing.Size(141, 64);
             this.btnRegLogin.TabIndex = 10;
             this.btnRegLogin.Text = "Login";
-            this.btnRegLogin.UseVisualStyleBackColor = true;
+            this.btnRegLogin.UseVisualStyleBackColor = false;
             this.btnRegLogin.Click += new System.EventHandler(this.button2_Click);
             // 
             // RegisterForm

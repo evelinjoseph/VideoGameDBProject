@@ -39,7 +39,10 @@ namespace VideoGameDBProject
             SqlCommand cmdAddAccount = DBConnection.CreateCommand();
             cmdAddAccount.CommandText = "INSERT INTO USERS VALUES(@Fname ,@Lname, @email, @password)";
 
-            if(txtFname.Text.Trim().Length > 0 && txtLname.Text.Trim().Length > 0 && txtEmail.Text.Trim().Length > 0 && txtPassword.Text.Trim().Length > 0)
+            SqlCommand cmdAddList = DBConnection.CreateCommand();
+            cmdAddList.CommandText = "INSERT INTO LIST values(@name, @email1)";
+
+            if (txtFname.Text.Trim().Length > 0 && txtLname.Text.Trim().Length > 0 && txtEmail.Text.Trim().Length > 0 && txtPassword.Text.Trim().Length > 0)
             {
                 
                 cmdAddAccount.Parameters.AddWithValue("@Fname", txtFname.Text.Trim());
@@ -47,14 +50,25 @@ namespace VideoGameDBProject
                 cmdAddAccount.Parameters.AddWithValue("@email", txtEmail.Text.Trim());
                 cmdAddAccount.Parameters.AddWithValue("@password", txtPassword.Text.Trim());
 
-            }
+               
+                cmdAddList.Parameters.AddWithValue("@name", "First List");
+                cmdAddList.Parameters.AddWithValue("@email1", txtEmail.Text.Trim());
+
+            } 
+               
             
 
             try
             {
 
                 cmdAddAccount.ExecuteNonQuery();
+                cmdAddList.ExecuteNonQuery();
                 MessageBox.Show("1 User has been added");
+
+                txtFname.Clear();
+                txtLname.Clear();
+                txtEmail.Clear();
+                txtPassword.Clear();
 
             }
             catch (Exception ex)
@@ -63,6 +77,8 @@ namespace VideoGameDBProject
 
 
             }
+
+
 
                 
         }

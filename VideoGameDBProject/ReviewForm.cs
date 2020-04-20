@@ -118,13 +118,13 @@ namespace VideoGameDBProject
                 reader2.Close();
 
             }
+
+           
         }
 
         private void ReviewForm_Load(object sender, EventArgs e)
         {
-            reviewGrid.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
-            reviewGrid.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
-            //reviewGrid.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            
 
             reviewCB.Items.Add("");
             SqlCommand cmdLoadVG = DBConnection.CreateCommand();
@@ -152,6 +152,8 @@ namespace VideoGameDBProject
             reviewGrid.DataSource = table;
 
             reader2.Close();
+
+            
         }
     }
 }

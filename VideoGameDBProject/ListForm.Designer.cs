@@ -151,12 +151,12 @@
             // Title
             // 
             this.Title.Text = "Title";
-            this.Title.Width = 78;
+            this.Title.Width = 95;
             // 
             // ReleaseDate
             // 
             this.ReleaseDate.Text = "Release Date";
-            this.ReleaseDate.Width = 124;
+            this.ReleaseDate.Width = 90;
             // 
             // Genre
             // 
@@ -198,7 +198,7 @@
             // columnHeader2
             // 
             this.columnHeader2.Text = "Release Date";
-            this.columnHeader2.Width = 124;
+            this.columnHeader2.Width = 90;
             // 
             // columnHeader3
             // 

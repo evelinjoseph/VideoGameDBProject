@@ -15,6 +15,7 @@ namespace VideoGameDBProject
     {
         public SqlConnection DBConnection;
         public string email;
+        public DateTime thisDate;
 
         public ListForm()
         {
@@ -50,7 +51,9 @@ namespace VideoGameDBProject
             while (reader2.Read())
             {
                 ListViewItem lv = new ListViewItem(reader2[0].ToString());
-                lv.SubItems.Add(reader2[1].ToString());
+                
+                thisDate = DateTime.Parse(reader2[1].ToString());
+                lv.SubItems.Add(thisDate.ToString("d"));
                 lv.SubItems.Add(reader2[2].ToString());
                 lv.SubItems.Add(reader2[3].ToString());
                 lv.SubItems.Add(reader2[4].ToString());
@@ -70,7 +73,9 @@ namespace VideoGameDBProject
             while (reader3.Read())
             {
                 ListViewItem lv = new ListViewItem(reader3[0].ToString());
-                lv.SubItems.Add(reader3[1].ToString());
+                
+                thisDate = DateTime.Parse(reader3[1].ToString());
+                lv.SubItems.Add(thisDate.ToString("d"));
                 lv.SubItems.Add(reader3[2].ToString());
                 lv.SubItems.Add(reader3[3].ToString());
                 lv.SubItems.Add(reader3[4].ToString());
@@ -88,7 +93,7 @@ namespace VideoGameDBProject
         {
             SqlCommand cmdLoadGrid = DBConnection.CreateCommand();
 
-            cmdLoadGrid.CommandText = "SELECT VG.Title, VG.ReleaseDate, VG.Genre, D.Developer_Name, P.Publisher_Name FROM VIDEO_GAME AS VG, PUBLISHER AS P, DEVELOPER AS D, LIST AS L, LIST_ITEM AS LI WHERE VG.Dev_id = D.Developer_ID AND VG.Pub_id = P.Publisher_ID AND VG.VideoGame_id = LI.V_ID AND L.List_ID = LI.L_ID AND L.List_Name = '" + comboBox1.SelectedItem + "'";
+            cmdLoadGrid.CommandText = "SELECT VG.Title, VG.ReleaseDate, VG.Genre, D.Developer_Name, P.Publisher_Name FROM VIDEO_GAME AS VG, PUBLISHER AS P, DEVELOPER AS D, LIST AS L, LIST_ITEM AS LI WHERE VG.Dev_id = D.Developer_ID AND VG.Pub_id = P.Publisher_ID AND VG.VideoGame_id = LI.V_ID AND L.List_ID = LI.L_ID AND L.List_Name = '" + comboBox1.SelectedItem + "' AND L.User_Email = '" + email + "'";
 
             SqlDataReader reader2 = cmdLoadGrid.ExecuteReader();
 
@@ -97,7 +102,8 @@ namespace VideoGameDBProject
             while (reader2.Read())
             {
                 ListViewItem lv = new ListViewItem(reader2[0].ToString());
-                lv.SubItems.Add(reader2[1].ToString());
+                thisDate = DateTime.Parse(reader2[1].ToString());
+                lv.SubItems.Add(thisDate.ToString("d"));
                 lv.SubItems.Add(reader2[2].ToString());
                 lv.SubItems.Add(reader2[3].ToString());
                 lv.SubItems.Add(reader2[4].ToString());
@@ -205,7 +211,7 @@ namespace VideoGameDBProject
 
             SqlCommand cmdLoadGrid = DBConnection.CreateCommand();
 
-            cmdLoadGrid.CommandText = "SELECT VG.Title, VG.ReleaseDate, VG.Genre, D.Developer_Name, P.Publisher_Name FROM VIDEO_GAME AS VG, PUBLISHER AS P, DEVELOPER AS D, LIST AS L, LIST_ITEM AS LI WHERE VG.Dev_id = D.Developer_ID AND VG.Pub_id = P.Publisher_ID AND VG.VideoGame_id = LI.V_ID AND L.List_ID = LI.L_ID AND L.List_Name = '" + comboBox1.SelectedItem + "'";
+            cmdLoadGrid.CommandText = "SELECT VG.Title, VG.ReleaseDate, VG.Genre, D.Developer_Name, P.Publisher_Name FROM VIDEO_GAME AS VG, PUBLISHER AS P, DEVELOPER AS D, LIST AS L, LIST_ITEM AS LI WHERE VG.Dev_id = D.Developer_ID AND VG.Pub_id = P.Publisher_ID AND VG.VideoGame_id = LI.V_ID AND L.List_ID = LI.L_ID AND L.List_Name = '" + comboBox1.SelectedItem + "' AND L.User_Email = '" + email + "'";
 
             SqlDataReader reader2 = cmdLoadGrid.ExecuteReader();
 
@@ -214,7 +220,8 @@ namespace VideoGameDBProject
             while (reader2.Read())
             {
                 ListViewItem lv = new ListViewItem(reader2[0].ToString());
-                lv.SubItems.Add(reader2[1].ToString());
+                thisDate = DateTime.Parse(reader2[1].ToString());
+                lv.SubItems.Add(thisDate.ToString("d"));
                 lv.SubItems.Add(reader2[2].ToString());
                 lv.SubItems.Add(reader2[3].ToString());
                 lv.SubItems.Add(reader2[4].ToString());
@@ -260,7 +267,7 @@ namespace VideoGameDBProject
 
                 SqlCommand cmdLoadGrid = DBConnection.CreateCommand();
 
-                cmdLoadGrid.CommandText = "SELECT VG.Title, VG.ReleaseDate, VG.Genre, D.Developer_Name, P.Publisher_Name FROM VIDEO_GAME AS VG, PUBLISHER AS P, DEVELOPER AS D, LIST AS L, LIST_ITEM AS LI WHERE VG.Dev_id = D.Developer_ID AND VG.Pub_id = P.Publisher_ID AND VG.VideoGame_id = LI.V_ID AND L.List_ID = LI.L_ID AND L.List_Name = '" + comboBox1.SelectedItem + "'";
+                cmdLoadGrid.CommandText = "SELECT VG.Title, VG.ReleaseDate, VG.Genre, D.Developer_Name, P.Publisher_Name FROM VIDEO_GAME AS VG, PUBLISHER AS P, DEVELOPER AS D, LIST AS L, LIST_ITEM AS LI WHERE VG.Dev_id = D.Developer_ID AND VG.Pub_id = P.Publisher_ID AND VG.VideoGame_id = LI.V_ID AND L.List_ID = LI.L_ID AND L.List_Name = '" + comboBox1.SelectedItem + "' AND L.User_Email = '" + email + "'";
 
                 SqlDataReader reader2 = cmdLoadGrid.ExecuteReader();
 
@@ -269,7 +276,8 @@ namespace VideoGameDBProject
                 while (reader2.Read())
                 {
                     ListViewItem lv = new ListViewItem(reader2[0].ToString());
-                    lv.SubItems.Add(reader2[1].ToString());
+                    thisDate = DateTime.Parse(reader2[1].ToString());
+                    lv.SubItems.Add(thisDate.ToString("d"));
                     lv.SubItems.Add(reader2[2].ToString());
                     lv.SubItems.Add(reader2[3].ToString());
                     lv.SubItems.Add(reader2[4].ToString());
@@ -360,7 +368,8 @@ namespace VideoGameDBProject
                 while (reader2.Read())
                 {
                     ListViewItem lv = new ListViewItem(reader2[0].ToString());
-                    lv.SubItems.Add(reader2[1].ToString());
+                    thisDate = DateTime.Parse(reader2[1].ToString());
+                    lv.SubItems.Add(thisDate.ToString("d"));
                     lv.SubItems.Add(reader2[2].ToString());
                     lv.SubItems.Add(reader2[3].ToString());
                     lv.SubItems.Add(reader2[4].ToString());
@@ -380,7 +389,8 @@ namespace VideoGameDBProject
                 while (reader3.Read())
                 {
                     ListViewItem lv = new ListViewItem(reader3[0].ToString());
-                    lv.SubItems.Add(reader3[1].ToString());
+                    thisDate = DateTime.Parse(reader3[1].ToString());
+                    lv.SubItems.Add(thisDate.ToString("d"));
                     lv.SubItems.Add(reader3[2].ToString());
                     lv.SubItems.Add(reader3[3].ToString());
                     lv.SubItems.Add(reader3[4].ToString());
@@ -456,7 +466,8 @@ namespace VideoGameDBProject
             while (reader2.Read())
             {
                 ListViewItem lv = new ListViewItem(reader2[0].ToString());
-                lv.SubItems.Add(reader2[1].ToString());
+                thisDate = DateTime.Parse(reader2[1].ToString());
+                lv.SubItems.Add(thisDate.ToString("d"));
                 lv.SubItems.Add(reader2[2].ToString());
                 lv.SubItems.Add(reader2[3].ToString());
                 lv.SubItems.Add(reader2[4].ToString());
@@ -476,7 +487,8 @@ namespace VideoGameDBProject
             while (reader3.Read())
             {
                 ListViewItem lv = new ListViewItem(reader3[0].ToString());
-                lv.SubItems.Add(reader3[1].ToString());
+                thisDate = DateTime.Parse(reader3[1].ToString());
+                lv.SubItems.Add(thisDate.ToString("d"));
                 lv.SubItems.Add(reader3[2].ToString());
                 lv.SubItems.Add(reader3[3].ToString());
                 lv.SubItems.Add(reader3[4].ToString());
