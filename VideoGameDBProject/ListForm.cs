@@ -80,11 +80,7 @@ namespace VideoGameDBProject
             }
           
            
-
             reader3.Close();
-
-
-
 
         }
 

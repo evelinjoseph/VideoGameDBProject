@@ -83,7 +83,7 @@ namespace VideoGameDBProject
 
 
 
-                cmdLoadReview1.CommandText = "SELECT VG.Title, R.Reviewer_Name, R.Review_URL FROM VIDEO_GAME AS VG, REVIEW AS R WHERE VG.VideoGame_id = R.Game_ID";
+                cmdLoadReview1.CommandText = "SELECT VG.Title, R.Reviewer_Name, R.Review_URL, R.Review_Text FROM VIDEO_GAME AS VG, REVIEW AS R WHERE VG.VideoGame_id = R.Game_ID";
 
 
                 SqlDataReader reader3 = cmdLoadReview1.ExecuteReader();
@@ -105,7 +105,7 @@ namespace VideoGameDBProject
                 SqlCommand cmdLoadReview = DBConnection.CreateCommand();
 
 
-                cmdLoadReview.CommandText = "SELECT VG.Title, R.Reviewer_Name, R.Review_URL FROM VIDEO_GAME AS VG, REVIEW AS R WHERE VG.VideoGame_id = R.Game_ID AND VG.Title = '" + reviewCB.SelectedItem + "'";
+                cmdLoadReview.CommandText = "SELECT VG.Title, R.Reviewer_Name, R.Review_URL, R.Review_Text FROM VIDEO_GAME AS VG, REVIEW AS R WHERE VG.VideoGame_id = R.Game_ID AND VG.Title = '" + reviewCB.SelectedItem + "'";
 
                 
                 SqlDataReader reader2 = cmdLoadReview.ExecuteReader();
@@ -122,6 +122,9 @@ namespace VideoGameDBProject
 
         private void ReviewForm_Load(object sender, EventArgs e)
         {
+            reviewGrid.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
+            reviewGrid.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+            //reviewGrid.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
 
             reviewCB.Items.Add("");
             SqlCommand cmdLoadVG = DBConnection.CreateCommand();
@@ -138,7 +141,7 @@ namespace VideoGameDBProject
 
 
             
-            cmdLoadReview.CommandText = "SELECT VG.Title, R.Reviewer_Name, R.Review_URL FROM VIDEO_GAME AS VG, REVIEW AS R WHERE VG.VideoGame_id = R.Game_ID";
+            cmdLoadReview.CommandText = "SELECT VG.Title, R.Reviewer_Name, R.Review_URL, R.Review_Text FROM VIDEO_GAME AS VG, REVIEW AS R WHERE VG.VideoGame_id = R.Game_ID";
 
 
             SqlDataReader reader2 = cmdLoadReview.ExecuteReader();

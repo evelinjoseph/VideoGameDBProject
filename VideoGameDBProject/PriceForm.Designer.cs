@@ -43,12 +43,17 @@
             // 
             // priceGrid
             // 
+            this.priceGrid.AllowUserToAddRows = false;
+            this.priceGrid.AllowUserToDeleteRows = false;
+            this.priceGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.priceGrid.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.priceGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.priceGrid.Location = new System.Drawing.Point(31, 189);
             this.priceGrid.Name = "priceGrid";
+            this.priceGrid.ReadOnly = true;
             this.priceGrid.RowHeadersWidth = 62;
             this.priceGrid.RowTemplate.Height = 28;
-            this.priceGrid.Size = new System.Drawing.Size(879, 316);
+            this.priceGrid.Size = new System.Drawing.Size(960, 373);
             this.priceGrid.TabIndex = 1;
             this.priceGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.priceGrid_CellContentClick);
             // 
@@ -56,7 +61,7 @@
             // 
             this.priceCB.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.priceCB.FormattingEnabled = true;
-            this.priceCB.Location = new System.Drawing.Point(385, 133);
+            this.priceCB.Location = new System.Drawing.Point(460, 137);
             this.priceCB.Name = "priceCB";
             this.priceCB.Size = new System.Drawing.Size(382, 28);
             this.priceCB.TabIndex = 2;
@@ -67,7 +72,7 @@
             this.priceLabel1.AutoSize = true;
             this.priceLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.priceLabel1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.priceLabel1.Location = new System.Drawing.Point(143, 132);
+            this.priceLabel1.Location = new System.Drawing.Point(218, 136);
             this.priceLabel1.Name = "priceLabel1";
             this.priceLabel1.Size = new System.Drawing.Size(227, 29);
             this.priceLabel1.TabIndex = 3;
@@ -79,7 +84,7 @@
             this.reviewLabel.AutoSize = true;
             this.reviewLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.reviewLabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.reviewLabel.Location = new System.Drawing.Point(581, 37);
+            this.reviewLabel.Location = new System.Drawing.Point(649, 37);
             this.reviewLabel.Name = "reviewLabel";
             this.reviewLabel.Size = new System.Drawing.Size(105, 29);
             this.reviewLabel.TabIndex = 14;
@@ -91,7 +96,7 @@
             this.priceLabel.AutoSize = true;
             this.priceLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.priceLabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.priceLabel.Location = new System.Drawing.Point(474, 37);
+            this.priceLabel.Location = new System.Drawing.Point(542, 37);
             this.priceLabel.Name = "priceLabel";
             this.priceLabel.Size = new System.Drawing.Size(81, 29);
             this.priceLabel.TabIndex = 13;
@@ -103,7 +108,7 @@
             this.listLabel.AutoSize = true;
             this.listLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listLabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.listLabel.Location = new System.Drawing.Point(712, 37);
+            this.listLabel.Location = new System.Drawing.Point(780, 37);
             this.listLabel.Name = "listLabel";
             this.listLabel.Size = new System.Drawing.Size(99, 29);
             this.listLabel.TabIndex = 12;
@@ -115,7 +120,7 @@
             this.homeLabel.AutoSize = true;
             this.homeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.homeLabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.homeLabel.Location = new System.Drawing.Point(370, 37);
+            this.homeLabel.Location = new System.Drawing.Point(438, 37);
             this.homeLabel.Name = "homeLabel";
             this.homeLabel.Size = new System.Drawing.Size(78, 29);
             this.homeLabel.TabIndex = 11;
@@ -125,7 +130,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(837, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(905, 12);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(110, 79);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -138,7 +143,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(32)))), ((int)(((byte)(130)))));
-            this.ClientSize = new System.Drawing.Size(959, 546);
+            this.ClientSize = new System.Drawing.Size(1027, 593);
             this.Controls.Add(this.reviewLabel);
             this.Controls.Add(this.priceLabel);
             this.Controls.Add(this.listLabel);
